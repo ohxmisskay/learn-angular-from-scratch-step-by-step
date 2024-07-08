@@ -1,4 +1,4 @@
-using Node v10
+# using Node v10
 FROM node:10
 
 # Create app directory
