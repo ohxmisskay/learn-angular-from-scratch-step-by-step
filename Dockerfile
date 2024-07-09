@@ -1,4 +1,4 @@
-# using Node v10
+# Using Node v10
 FROM node:10
 
 # Create app directory
@@ -9,11 +9,10 @@ WORKDIR /usr/src/lafs
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install -g @angular/cli@v6-lts 
 RUN npm install
+
 # If you are building your code for production
 # RUN npm ci --only=production
-
 # Bundle app source
 COPY . .
 
