@@ -19,5 +19,6 @@ COPY . .
 
 # Expose port 3000 outside container
 EXPOSE 3000
+
 # Command used to start application
-CMD ng serve --host 0.0.0.0
+CMD npm run start
