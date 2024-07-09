@@ -9,6 +9,7 @@ WORKDIR /usr/src/lafs
 # where available (npm@5+)
 COPY package*.json ./
 
+RUN npm install -g @angular/cli@v6-lts
 RUN npm install
 
 # If you are building your code for production
@@ -16,8 +17,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Expose port 3000 outside container
-EXPOSE 3000
+# Expose port 4200 outside container
+EXPOSE 4200
 
 # Command used to start application
-CMD npm run start
+CMD ng serve --host 0.0.0.0
